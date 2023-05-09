@@ -1,5 +1,10 @@
 # 搭建jekyll会议页面
 
+## 复制代码
+
+1. 从模板复制一份代码 https://github.com/w3c-beihang/meeting-template/fork 到目标仓库
+2. 修改内容后，启动 GitHub Pages
+
 ## 代码结构
 
 - index.html 首页
@@ -26,5 +31,6 @@ jekyll serve
 
 ## 在GitHub 配置服务器
 1. 确保项目是public的repo
-2. 打开GitHub pages 开关，一般在开关在 https://github.com/xxx/xxx/settings/pages
-3. 在新项目里删掉这个README.md文件，因为所有根目录的文件都可以访问。这个文件不需要。
+2. 打开GitHub pages 开关，一般在开关在 https://github.com/xxx/xxx/settings/pages. 在【Branch】下拉框选择'main'分支，点击【save】按钮即可。
+3. 在新项目里删掉这个README.md、.gitignore文件，因为所有根目录的文件都可以访问。这些文件不需要。
+4. 点击对应地址看效果，如 https://w3c-beihang.github.io/meeting-template/

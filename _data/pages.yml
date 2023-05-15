@@ -1,7 +1,7 @@
 pages:
-- title: 第1页导航
+- title: 会议简介
   url: index.html
-- title: 第2页导航
-  url: cfp.html
-- title: 第3页导航
-  url: sponsorship.html
+- title: 日程安排
+  url: agenda.html
+- title: 如何参会
+  url: participate.html

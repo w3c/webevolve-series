@@ -70,14 +70,14 @@ header #translations {
 }
 
 #top hgroup * {
-  padding: 1rem;
-  color: #AAC9FC;
+  padding: 1.2rem;
+  color: #ffffff;
   text-shadow: 4px 4px 20px black;
 }
 
 @media all and (min-width: 787px) {
   #top hgroup {
-    margin-left: 450px;
+    margin-left: 550px;
   }
 
 }
@@ -703,7 +703,7 @@ ol { margin-left: 1.5rem;}
 
 #top hgroup {
   background-color: #000;
-  opacity: .8;
+  opacity: .9;
 }
 
 label:before, label:after {

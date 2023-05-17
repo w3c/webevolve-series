@@ -1,7 +1,7 @@
 pages:
-- title: 会议简介
+- title: 会议简介<br>Overview
   url: index.html
-- title: 日程安排
+- title: 日程安排<br>Agenda
   url: agenda.html
-- title: 如何参会
+- title: 如何参会<br>Participation
   url: cfp.html

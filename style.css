@@ -211,6 +211,10 @@ table.zebra tr:nth-child(even) {
   background-color: hsl(180, 30%, 93%)
 }
 
+table.zebra th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+/* table.zebra td{border-bottom:1px solid #ddd;padding:.2em 1em;} */
+table.zebra td{border-bottom:1px solid #ddd;padding:1em;}
+
 /* If you rather clip than squeeze the image, remove `height: 100%`. */
 .box {
   clear: right;

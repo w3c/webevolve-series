@@ -5,3 +5,5 @@ pages:
   url: agenda.html
 - title: 如何参会<br>Participation
   url: cfp.html
+- title: 总结报告<br>Report
+  url: report-en.html

@@ -1,9 +1,9 @@
 pages:
 - title: 会议简介<br>Overview
   url: index.html
-- title: 日程安排<br>Agenda
+- title: 议程安排<br>Agenda
   url: agenda.html
 - title: 如何参会<br>Participation
   url: cfp.html
-- title: 总结报告<br>Report
-  url: report-en.html
+- title: 参会嘉宾<br>Attendees
+  url: attendees.html

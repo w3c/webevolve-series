@@ -1,7 +1,7 @@
 pages:
-- title: 会议简介<br>Overview
+- title: 活动介绍<br>Overview
   url: index.html
-- title: 议程安排<br>Agenda
-  url: agenda.html
-- title: 参会名单<br>Attendees
-  url: attendees.html
+- title: 专题讨论：Solid<br> Topic: Solid
+  url: solid.html
+- title: 更多专题<br>Upcoming Events
+  url: upcoming.html

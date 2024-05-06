@@ -3,11 +3,7 @@ pages:
   url: en.index.html
 - title: "Topics: Machine Learning, WebGPU, Media Technologies"
   url: en.media.html
-- title: Upcoming Events
-  url: en.upcoming.html
 - title: 活动介绍
   url: zh.index.html
 - title: "专题：机器学习、WebGPU、媒体技术"
   url: zh.media.html
-- title: 更多专题
-  url: zh.upcoming.html

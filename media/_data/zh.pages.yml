@@ -1,0 +1,7 @@
+pages:
+- title: 活动介绍
+  url: zh.index.html
+- title: "专题：机器学习、WebGPU、媒体技术
+  url: zh.index.html
+- title: 更多专题
+  url: upcoming.html

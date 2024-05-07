@@ -1313,5 +1313,24 @@ body:not(.sync) #buttonbar .button, body:not(.sync) #buttonbar button,
 }
 
 header #translations {
-  float: right;
+  float: left;
+}
+
+#top {
+        background-color: black;
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 454px;
+  color: white;
+  position: relative;
+}
+
+#top.small {
+    background-color: black;
+  background-image: url("img/bg-sm.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100px;
+  position: relative;
 }

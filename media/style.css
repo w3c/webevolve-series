@@ -1318,7 +1318,7 @@ header #translations {
 
 #top {
         background-color: black;
-  background-image: url("img/bg.jpg");
+  background-image: url("bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 454px;
@@ -1328,7 +1328,7 @@ header #translations {
 
 #top.small {
     background-color: black;
-  background-image: url("img/bg-sm.jpg");
+  background-image: url("bg-small.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100px;

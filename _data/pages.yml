@@ -1,9 +1,7 @@
 pages:
-- title: Overview
-  url: en.index.html
-- title: "Topics: Machine Learning, WebGPU, Media Technologies"
-  url: en.media.html
-- title: 活动介绍
-  url: zh.index.html
-- title: "专题：机器学习、WebGPU、媒体技术"
-  url: zh.media.html
+- title: 活动介绍<br>Overview
+  url: index.html
+- title: "专题：机器学习、WebGPU、媒体技术<br> Topics: Machine Learning, WebGPU, Media Technologies"
+  url: media.html
+- title: 更多专题<br>Upcoming Events
+  url: upcoming.html

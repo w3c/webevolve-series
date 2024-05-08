@@ -1316,6 +1316,11 @@ header #translations {
   float: right;
 }
 
+#top hgroup {
+  background-color: #000;
+  opacity: .75;
+}
+
 #top {
   background-color: black;
 background-image: url("img/bg.jpg");

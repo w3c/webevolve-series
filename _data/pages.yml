@@ -2,6 +2,6 @@ pages:
 - title: 活动介绍<br>Overview
   url: index.html
 - title: "专题：机器学习、WebGPU、媒体技术<br> Topics: Machine Learning, WebGPU, Media Technologies"
-  url: media.html
+  url: media/zh.index.html
 - title: 更多专题<br>Upcoming Events
   url: upcoming.html

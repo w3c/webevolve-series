@@ -1316,3 +1316,49 @@ header #translations {
   float: right;
 }
 
+#top {
+  background-color: black;
+background-image: url("img/bg.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 454px;
+color: white;
+position: relative;
+}
+
+#top.small {
+background-color: black;
+background-image: url("img/bg-sm.jpg");
+background-repeat: no-repeat;
+background-size: contain;
+min-height: 100px;
+position: relative;
+}
+
+#top hgroup p {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+#top hgroup * {
+padding: 1.2rem;
+color: #ffffff;
+text-shadow: 4px 4px 20px black;
+}
+
+@media all and (min-width: 787px) {
+#top hgroup {
+margin-left: 470px;
+}
+
+}
+
+#top.small h1 {
+text-shadow: none;
+margin-left: 100px;
+}
+
+
+#top h1 a:link, #top h1 a:visited { color: white;}
+
+#top a.credit { position: absolute; bottom:0; right:0;}

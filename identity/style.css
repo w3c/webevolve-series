@@ -1,0 +1,1369 @@
+/* Defaults for some new HTML5 elements for older browsers */
+header, nav, section, aside, main, footer, details {display: block}
+summary {display: list-item}
+header {font-weight: bold}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  background: #fff;
+}
+
+html {
+  font-size: 14px;
+  padding: 3em;
+}
+
+body {
+  border-radius: .6em;
+  color: #333;
+  font: 1.1em/1.6 Helvetica, Arial, Verdana, sans-serif;
+  hyphens: manual;
+  margin: 0 auto;
+  max-width: 65em;
+  padding: 1em;
+}
+
+.header :first-child {
+  margin-top: 0;
+}
+
+
+.footer :last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+ul,
+ol {
+  margin: 1.5rem 0;
+}
+
+h3 {
+  margin-top: 4rem;
+}
+
+h2 + h3,
+h2 + section > h3 {
+  margin-top: 1.5rem;
+}
+
+h4 {
+  margin-top: 3rem;
+}
+
+h3 + h4,
+h3 + section > h4 {
+  margin-top: 1.5rem;
+}
+
+ol {
+  margin-left: 1.1em;
+}
+
+a,
+h1,
+h2,
+.menu a.active-tab {
+  color: #005a9c;
+}
+
+a:hover {
+  color: #111;
+}
+
+a.ref,
+.has-ref {
+  cursor: pointer;
+}
+
+p.has-ref {
+  cursor: initial;
+}
+
+a.ref {
+  color: inherit;
+  display: none;
+  font-size: 1em;
+  left: 0;
+  opacity: .25;
+  position: absolute;
+  text-decoration: none;
+}
+
+.has-ref:hover > a.ref {
+  display: block;
+}
+
+.has-ref:target > a.ref {
+  display: block;
+  opacity: .5;
+}
+
+.has-ref {
+  margin-left: -1em;
+  padding-left: 1em;
+  position: relative;
+}
+
+.graphic {
+  height: 13em;
+  margin: 0 -1.5em;
+  overflow: hidden;
+  position: relative;
+}
+
+.graphic img {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.box,
+.type {
+  box-shadow: .3em .3em 0 rgba(0,0,0,.1);
+  border: 1px solid #ccc;
+  margin-top: 0;
+}
+
+
+/* Each section has a link to the next section, or to the top of the
+   page. The link is inside an element (usually <p>) with
+   class=skip.
+
+   Inside the banner (<header>), the link is nearly transparent unless
+   it has the focus, because that looks better. It remains visible for
+   a second after it lost the focus again.
+
+   The maximum width of a normal section is 52rem/20em minus a bit for
+   the scrollbar, hence we set the maximum width of the .skip to a
+   little less than 20em.
+
+   Skip-arrows have a color depending on the section background. Give
+   them a 1-pixel outline so they are visible in case they are on top
+   of an image.
+*/
+.skip {position: absolute; top: -3.6rem; right: 0; color: #c9242b; width: 100%;
+  z-index: 1;
+  max-width: 19.7em; text-align: right; font-size: 2em; margin: 0; height: 0}
+section:nth-of-type(2n+1) .skip {color: black;
+  text-shadow: -1px -1px 0 hsl(0,0%,98%), 1px 1px 0 hsl(0,0%,98%),
+    -1px 1px 0 hsl(0,0%,98%), 1px -1px 0 hsl(0,0%,98%)}
+section:nth-of-type(2n+2) .skip {color: white;
+  text-shadow: -1px -1px 0 #005a9c, 1px 1px 0 #005a9c,
+    -1px 1px 0 #005a9c, 1px -1px 0 #005a9c}
+footer .skip {color: black;
+  text-shadow: -1px -1px 0 #eee, 1px 1px 0 #eee,
+    -1px 1px 0 #eee, 1px -1px 0 #eee}
+@media (min-width: 46em) and (min-height: 46em), (min-width: 56em) {
+  .skip {top: -7.2rem}}
+header .skip {top: -1.2rem; z-index: 2}
+.skip a span {display: none} /* Suppress text meant for Lynx */
+.skip a {text-decoration: none}
+header .skip a {opacity: 0.1; transition: 1s 1s}
+header .skip a:hover, header .skip a:focus {opacity: 1; transition: 0.2s;
+  background: #ccc}
+@supports (transform: translate(50%, 0)) {
+  .skip {right: 50%; transform: translate(50%, 0)}
+}
+.skip {display: none}   /* No skip link on small screens */
+@media screen and (min-width: 33em) {.skip {display: block}}
+
+/* If you rather clip than squeeze the image, remove `height: 100%`. */
+.box {
+  clear: right;
+  color: #666;
+  float: right;
+  font-size: 1rem;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  padding: 1em;
+  width: 19em;
+  background-color: #f2fdff;
+}
+
+.box h2 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.box *:last-child {
+  margin-bottom: 0;
+}
+
+.box.compact p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.box.compact ul {
+  margin-top: 0;
+}
+
+#sponsoring {
+  background-color: white;
+}
+
+#sponsoring p {
+  text-align: center;
+}
+
+.small {
+  color: #777;
+  font-size: 1rem;
+}
+
+.image-paragraph-host {
+  margin-bottom: .75em;
+}
+
+.image-paragraph {
+  margin: 0;
+}
+
+.image-link {
+  display: block;
+}
+
+.image-link img {
+  max-width: 225px;
+  padding: 2.5vmin 0;
+  width: 100%;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  clear: both;
+  color: #777;
+  font-size: 1rem;
+  margin: 2rem 0;
+  padding-top: .5rem;
+}
+
+.menu {
+  background: #005a9c;
+  font-size: 1rem;
+  margin: 0 0 2em;
+}
+
+.menu,
+.menu ul,
+.menu li {
+  width: 100%;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li + li a {
+  border-left: 2px solid #fff;
+}
+
+.menu a {
+  color: #eee;
+  display: block;
+  font-size: .95rem;
+  height: 100%;
+  padding: .6rem;
+  text-align: center;
+  text-decoration: none;
+  transition: .05s background ease-in-out, .05s color ease-in-out;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.menu a:hover {
+  background: #111;
+  color: #fff;
+}
+
+.menu a:active {
+  opacity: .75;
+}
+
+.menu a.active-tab {
+  background: #fff;
+  font-weight: bold;
+  pointer-events: none;
+  border-top: solid thin #005a9c;
+  border-bottom: solid thin #005a9c;
+}
+
+ul {
+  list-style: square;
+  margin-left: 0;
+  padding-left: 1em;
+  margin-top: 0;
+}
+
+ul ul {
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin-left: 1em;
+}
+
+.main {
+  margin-top: 3rem;
+}
+
+dd {
+  margin: 0 0 .6em;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.main dt {
+  margin-top: 2rem;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  break-after: avoid;
+}
+
+.main h2 {
+  margin-top: 1.5em;
+}
+
+address {
+  line-height: .25em;
+}
+
+@media all and (min-width: 699px) {
+  html {
+    background: #005a9c;
+  }
+}
+
+@media all and (max-width: 860px) {
+  html {
+    padding: 0;
+  }
+
+  body {
+    border-radius: 0;
+  }
+
+  .menu ul {
+    display: block;
+  }
+
+  .menu li + li a {
+    border-top: 2px solid #fff;
+    border-left: 0;
+  }
+
+  .menu li + li a {
+    margin-left: 0;
+  }
+
+  .graphic {
+    height: 10em;
+    margin: 0;
+  }
+
+  /* The right-floating boxes become normal blocks. */
+  .box {
+    float: none;
+    margin-left: 0;
+    width: auto;
+  }
+}
+
+@page {
+  margin: 2cm;
+}
+
+@media print {
+  html {
+    background: none;
+    padding: 0;
+  }
+
+  body {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+/* Initialize footnote counters. */
+body {
+  counter-reset: footnote_counter footnote-ref_counter;
+}
+
+h2.footnote {
+  counter-increment: footnote_counter;
+}
+
+a.footnote-ref {
+  counter-increment: footnote-ref_counter;
+  text-decoration: none;
+}
+
+h2.footnote:before {
+  content: counter(footnote_counter);
+  display: block;
+  float: left;
+  font-size: .9em;
+  margin-right: 1.25ch;
+  padding: 2em 4em;
+  vertical-align: top;
+}
+
+h2.footnote:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+a.footnote-ref:after {
+  content: counter(footnote-ref_counter);
+  font-size: .6em;
+  margin-left: .25em;
+  vertical-align: super;
+}
+
+h2.footnote:before,
+a.footnote-ref:after {
+  background-color: #005a9c;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  padding: .1em .5em;
+}
+
+.schedule {
+  list-style: none;
+}
+
+.schedule li,
+summary .desc {
+  display: flex;
+}
+
+.schedule li + li {
+  margin-top: .5rem;
+}
+
+summary .time {
+  background-color: #005c9c;
+  border-radius: 5px 0 0 5px;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  min-width: 8em;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+summary .time,
+.title,
+.type {
+  padding: 3px 6px;
+}
+
+.break summary .time {
+  background-color: #666;
+  color: #fff;
+}
+
+.break .title {
+  color: gray;
+  font-style: italic;
+}
+
+summary .time span { font-size: 67%; }
+
+.type {
+  clear: right;
+  display: inline-block;
+  font-size: 67%;
+  font-weight: normal;
+  height: 100%;
+  margin: 0 13px 0 0;
+  order: -1;
+  min-width: 6.4em;
+}
+
+.type:empty {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+dt.type {
+  font-size: 100%;
+  margin: 0;
+}
+
+.type-lightning {
+  background-color: #ffe7ba;
+}
+
+.type-plenary {
+  background-color: #b9d3ee;
+}
+
+.type-breakout {
+  background-color: #c0d9af;
+}
+
+.type-workshop {
+  background-color: #ffe4e1;
+}
+
+span.title {
+  display: block;
+  flex: 1;
+  margin-left: 5px;
+  order: 1;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+li:not(.no-details) details summary .desc {
+  cursor: pointer;
+}
+
+details summary .desc:before {
+  color: #999;
+  content: "▶";
+  display: inline-block;
+  height: 18px;
+  margin-right: 8px;
+  order: -2;
+  width: 18px;
+}
+
+details[open] summary .desc:before {
+  color: #666;
+  transform: rotate(90deg);
+  position: relative;
+  left: -2px;
+  top: 5px;
+}
+
+.no-details details .desc:before {
+  content: "";
+}
+
+details,
+.no-details details:hover {
+  opacity: .9;
+}
+
+details summary {
+  outline: none;
+}
+
+details:hover,
+details[open] summary {
+  opacity: 1;
+}
+
+.schedule details {
+  width: 100%;
+}
+
+.schedule details dl {
+  box-shadow: .3em .3em 0 rgba(0,0,0,.1);
+  border: 1px solid #ccc;
+  margin: 9px 0 5px 27px;
+  padding: 1rem;
+  position: relative;
+}
+
+/* from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
+.schedule details dl::after {
+  border-color: #005c9c transparent;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  content: "";
+  display: block;
+  left: 8em;
+  position: absolute;
+  top: -16px;
+  width: 0;
+}
+
+.schedule details dt {
+  margin: 0;
+}
+
+.schedule details dd {
+  margin: 0 0 0 1rem;
+}
+
+.schedule details dd span {
+  font-size: 75%;
+  color: #888;
+  display: block;
+  margin-bottom: .25em;
+}
+
+.schedule details dd + dt {
+  margin-top: 1rem;
+}
+
+.format {
+  margin-bottom: 2.25rem;
+}
+
+.format dt {
+  font-size: 1.1rem;
+  /*font-weight: 600;*/
+  margin: .5rem 0 1.25rem;
+  padding: .5rem 1rem;
+}
+
+.format dd {
+  margin: 0 1rem 1.5rem;
+}
+
+#sponsors p {
+  margin-left: 1em;
+}
+
+.sponsors-section {
+  margin-top: 1rem;
+}
+
+.sponsors-section :first-child {
+  margin-top: 0;
+}
+
+.sponsors-section :last-child {
+  margin-bottom: 0;
+}
+
+#notification {
+  background-color: #ff0;
+  border: 1px solid #ccc;
+  box-shadow: .2em .4em .5em #888;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 1em;
+  padding: .3em;
+  text-align: center;
+}
+
+.concluded {
+  text-decoration: line-through;
+}
+
+@media print {
+  h1 {
+    background: none;
+    color: #111;
+  }
+
+  nav, aside {
+    display: none;
+  }
+
+  body,
+  article {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  article {
+    page-break-before: always;
+  }
+
+  ul, img {
+    page-break-inside: avoid;
+  }
+
+  #dates {
+    display: none;
+  }
+}
+
+cite {
+  font-weight: bold;
+}
+
+.phone {
+  text-indent: -1em;
+  margin-left: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.phone cite {
+  padding: 3px 0;
+  margin: 0;
+  padding-left: 0;
+  border-left: none;
+  font-weight: bold;
+}
+
+.irc {
+  padding: 0.3em;
+  background-color: #eee;
+}
+
+.irc cite {
+  padding: 3px 0;
+  margin: 0;
+  padding-left: 0;
+  border-left: none;
+  font-weight: bold;
+}
+
+ol ol {
+  margin: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.note {
+  background: #c0d9af;
+  box-shadow: 10px 5px 3px 0px gray;
+  border-width: thin;
+  border-style: thin;
+  border-radius: 3px;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.note p {
+  margin: 0;
+}
+
+.note ul {
+  margin-bottom: 0;
+}
+
+.warning {
+  box-shadow: 10px 5px 3px 0px gray;
+  border-top-width: thin;
+  border-right-width: thin;
+  border-bottom-width: thin;
+  border-left-width: thin;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-radius: 3px;
+  width: 80%;
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+}
+
+.warning h1 {
+  font-size: 120%;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.warning p {
+  font-size: 110%;
+}
+
+.todo {
+  color: #900;
+  background-color:#FFC !important;
+  font-style: italic;
+}
+
+#banner .banner-title {
+  position: relative;
+  background: url('https://www.w3.org/2024/01/webevolve-series-events/media/bg.jpg') no-repeat 100% 100%;
+  background-size: 100%;
+  height: 380px;
+}
+
+#banner h1 {
+  position: absolute;
+  right: 0;
+  width: min(16em, 100%);
+  margin: 0;
+  color: white;
+  text-align: right;
+  font-size: min(180% + 1vw, 240%);
+  line-height: 1.4;
+  padding: 1em;
+}
+#banner h1+p {
+  margin-top: 0;
+}
+
+button {
+  font-size: 75%;
+  padding: 0.3em;
+}
+
+a.char {
+  text-decoration: none;
+}
+
+ul.detailed {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.detailed li:not(.no-details) details summary {
+  color: #333;
+  cursor: pointer;
+}
+
+ul.detailed li:not(.no-details) details summary:before {
+  color: #333;
+  content: "▶";
+  display: inline-block;
+  height: 18px;
+  margin-right: 8px;
+  order: -2;
+  width: 18px;
+}
+
+ul.detailed details[open] summary {
+  text-decoration: underline;
+}
+
+ul.detailed li:not(.no-details) details[open] summary:before {
+  transform: rotate(90deg);
+  position: relative;
+  left: -2px;
+  top: 5px;
+}
+
+ul.detailed .no-details details[open] summary {
+  margin-bottom: 1em;
+}
+
+ul.detailed .no-details summary:before {
+  color: #333;
+  content: "⏹";
+  display: inline-block;
+  height: 18px;
+  margin-right: 8px;
+  order: -2;
+  width: 18px;
+}
+
+ul.detailed dl, ul.detailed ul {
+  margin-top: 0;
+}
+ul.detailed dt {
+  margin-top: 0.5em;
+}
+
+ul.detailed details {
+  opacity: 1;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: thin solid #00365C;
+  padding: 0.5em;
+  vertical-align: top;
+}
+
+th:nth-child(1) {
+  width: 150px;
+}
+
+th {
+  background-color: #005a9c;
+  color: white;
+}
+
+figure {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.attribution {
+  font-size: small;
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333;
+}
+
+dfn {
+  font-weight: bolder;
+}
+
+label:before, label:after {
+  content: "\a";
+  white-space: pre;
+}
+
+input, textarea {
+  width: 100%;
+  font: .9em/1.1 Helvetica, Arial, Verdana, sans-serif;
+}
+
+input[type=checkbox] {
+  width: initial;
+}
+
+button {
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+
+div.talks > details {
+  border: 1px solid #ccc;
+  border-radius: .6em;
+  box-shadow: .3em .3em 0 rgba(0,0,0,.1);
+  margin-top: 20px;
+  padding: 1em;
+}
+
+div.talks > details > summary > div {
+  display: flex;
+  height: 150px;
+}
+
+div.talks > details > summary > div > div {
+  flex-grow: 1;
+}
+
+div.talks > details > summary img {
+  flex-basis: 100px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: .6em;
+}
+
+div.talks > details > summary {
+  position: relative;
+  list-style: none;
+}
+
+div.talks > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+div.talks h4 {
+  cursor: pointer;
+}
+
+div.talks > details > summary > div:after {
+  content: 'more ►';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  cursor: pointer;
+  color: gray;
+  display: none;
+}
+
+@media all and (min-width: 620px) {
+  div.talks > details > summary > div:after {
+    display: block;
+  }
+}
+
+div.talks > details > summary.nopicture > div:after {
+  right: 10px;
+}
+
+div.talks > details[open] > summary > div:after {
+  content: 'less ▼';
+  cursor: pointer;
+}
+
+div.talks > details[open] > summary img {
+  display: none;
+}
+
+div.talks .button {
+  padding: .5em;
+  margin-top: 1em;
+  background: #005a9c;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: .2em .3em .4em #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8em;
+  text-decoration: none;
+}
+
+div.talks .button:not([href]) {
+  background: rgb(240,240,240);
+  color: rgb(100,100,100);
+}
+
+div.talks h4 {
+  color: #005a9c;
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 500px) {
+  body {
+    padding: 3em;
+  }
+
+  div.talks h4 {
+    font-size: 1.3em;
+  }
+}
+
+div.talks dt {
+  margin: 0;
+}
+
+div.talks dd {
+     margin: 0;
+     padding-left: 1rem;
+}
+
+div.talks dd + dd { font-style: italic;}
+
+div.talks dd + dt {
+  padding-top: 1rem;
+}
+
+div.talks .speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+}
+
+div.talks .speaker img {
+  order: 2;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  border-radius: .6em;
+}
+
+@media all and (min-width: 600px) {
+  div.talks .speaker {
+    flex-direction: initial;
+    align-items: initial;
+  }
+}
+
+div.talks .speaker span {
+  font-weight: bold;
+}
+
+[data-action=toggle] button {
+  width: 300px;
+  margin-top: 0;
+  height: inherit;
+}
+
+.picto::before {
+  font-family: iconmonstr-iconic-font;
+  font-size-adjust: 1.0;
+  line-height: 0.6;
+  font-style: normal;
+  margin-right: 0.33em;
+  vertical-align: middle;
+  text-indent: 0;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.buttons, .badges {
+  overflow: visible;
+  display: grid;
+  grid: "a b" / 1fr 1fr;
+  grid-gap: 2px;
+  gap: 2px;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+@media all and (min-width: 33em) {
+  .buttons, .badges {
+    grid: "a b c" / 1fr 1fr 1fr;
+  }
+}
+
+#slides button {
+  background: hsla(204,0%,86%,1.0);
+  border: 1px outset hsla(204,0%,86%,1.0);
+  max-width: 13em;
+  color: inherit;
+  font-weight: normal !important;
+  min-height: 2.5em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.buttons > * {
+  background: hsla(204,0%,86%,1.0);
+  border: 1px outset hsla(204,0%,86%,1.0);
+  color: inherit;
+  font-weight: normal !important;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.buttons > *, .badges > * {
+  width: auto;
+  margin: 0;
+  float: none;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+#slides button:hover,
+.buttons button:hover,
+.buttons a:hover,
+body:not(.sync) #buttonbar .button:hover {
+  filter: brightness(105%);
+}
+
+.talk #intro h2 {
+  font-size: 2em;
+}
+
+.talk summary {
+  display: list-item;
+}
+
+.talk details ul {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+i-slide {
+  width: 40.889em;
+  max-width: 100%;
+  border-radius: 5px;
+  outline: thin solid #444;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-radius: 5px;
+}
+
+#slides > div {
+  width: 40.889em;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body:not(.sync) #buttonbar {
+  width: 40.889em;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sync #buttonbar button {
+  font-size: inherit;
+  margin: inherit;
+}
+
+body:not(.sync) #buttonbar .button, body:not(.sync) #buttonbar button,
+.buttons .button, .buttons button {
+  text-decoration: none;
+  cursor: default;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: center;
+  border-radius: 0.25em;
+  background: hsla(204,0%,86%,1.0) padding-box;
+  color: inherit;
+  border: 1px outset hsla(204,0%,86%,1.0);
+}
+
+#buttonbar label:before, #buttonbar label:after {
+  content: "";
+}
+
+#buttonbar [title="Help"] {
+  display: none;
+}
+
+#buttonbar label {
+  padding: 0.3em;
+}
+
+.button > input {
+  vertical-align: initial;
+}
+
+.sync.noslides #slidenr {
+  display: none;
+}
+
+.sync.noslides #video {
+  position: initial;
+  margin-top: 6em;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.sync.noslides #caption {
+  position: initial;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sync.noslides #buttonbar span:nth-child(2) {
+  display: none;
+}
+
+.related {
+  background-color: #C2CDCF;
+  border-radius: .6em;
+  padding: 1em;
+  width: 40.889em;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+.sync .related {
+  display: none;
+}
+
+#toc ul {
+  margin-bottom: 0;
+}
+
+.back-to-toc {
+  text-align: right;
+  clear: both;
+}
+
+header #translations {
+  float: right;
+}
+
+#top hgroup {
+  background-color: #000;
+  opacity: .75;
+}
+
+#top {
+  background-color: black;
+background-image: url("img/bg.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 380px;
+color: white;
+position: relative;
+}
+
+#top.small {
+background-color: black;
+background-image: url("img/bg-sm.jpg");
+background-repeat: no-repeat;
+background-size: contain;
+min-height: 100px;
+position: relative;
+}
+
+#top hgroup p {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+#top hgroup * {
+padding: 1.2rem;
+color: #ffffff;
+text-shadow: 4px 4px 20px black;
+}
+
+@media all and (min-width: 787px) {
+#top hgroup {
+margin-left: 470px;
+}
+
+}
+
+#top.small h1 {
+text-shadow: none;
+margin-left: 100px;
+}
+
+
+#top h1 a:link, #top h1 a:visited { color: white;}
+
+#top a.credit { position: absolute; bottom:0; right:0;}

@@ -229,7 +229,7 @@ W3C团队成员、[Web & AI 兴趣组](https://www.w3.org/groups/ig/webai/)联�
 介绍W3C MiniApps工作组、W3C高性能Web应用社区组、WebView社区组、IWA社区与PWA Widget社区的[联合讨论](https://www.w3.org/community/high-perf-baseline/2025/12/17/tpac-2025/)。
 
 **薛富侨：**  
-在GitHub上的讨论里，我也写了一些自己的想法。结合刚才饶海和各位专家的分享，我认为生成式UI的发展有两个主要方向：
+在GitHub上的讨论里，我也写了一些自己的想法。结合刚才各位专家的分享，我认为生成式UI的发展有两个主要方向：
 
 - 直接生成Web页面，即生成HTML/CSS/JS代码；
 - 基于组件库生成受限的卡片形式，例如用JS、XML等定义组件，然后通过组件库渲染。

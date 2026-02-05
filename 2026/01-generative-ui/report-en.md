@@ -12,7 +12,7 @@
 * [Open Discussion](#open-discussion)
 
   * [Q1: Performance and Load Speed](#q1-is-loading-speed-still-important-for-ai-generated-ui-in-chat-scenarios)
-  * [Q2: Standards Collaboration and Ecosystem](#q2-how-to-optimize-platform-and-ecosystem-through-standards-collaboration)
+  * [Q2: Standards Collaboration and Ecosystem](#q2-how-to-optimize-platforms-and-ecosystems-through-standards-collaboration)
   * [Q3: UI Components](#q3-ui-components)
   * [Q4: Web Subsets](#q4-web-subsets)
   * [Q5: Testing and Validation](#q5-testing-and-validation)

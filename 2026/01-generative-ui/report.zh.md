@@ -90,7 +90,7 @@ W3C团队成员、[Web & AI 兴趣组](https://www.w3.org/groups/ig/webai/)联�
 📄 PPT：
 [https://www.w3.org/2026/01/GenUI-China/Generative_UI_Technology_Insights_MCH.pptx](https://www.w3.org/2026/01/GenUI-China/Generative_UI_Technology_Insights_MCH.pptx)
 
-从工程视角系统分析了生成式 UI（Generative UI）的技术本质与落地路径。他指出，生成式UI的核心不在于A 驱动模板选择，而在于“实时生成（Real-time Generation）”能力：模型需在运行时基于用户意图与上下文动态生成页面结构、组件类型、布局方式与交互逻辑。当前多数实践仍属于设计态预设UI，本质是模板编排系统。AI仅参与参数填充与决策辅助，场景覆盖率受限，难以支撑长尾需求。
+从工程视角系统分析了生成式 UI（Generative UI）的技术本质与落地路径。他指出，生成式UI的核心不在于AI驱动模板选择，而在于“实时生成（Real-time Generation）”能力：模型需在运行时基于用户意图与上下文动态生成页面结构、组件类型、布局方式与交互逻辑。当前多数实践仍属于设计态预设UI，本质是模板编排系统。AI仅参与参数填充与决策辅助，场景覆盖率受限，难以支撑长尾需求。
 
 围绕企业实践，他提出“场景覆盖率”作为衡量生成能力的关键指标：模板化方案的覆盖范围受模板规模制约，而真正的生成式UI理论上可实现全场景适配。在技术演进上，生成式UI将经历模板阶段、原子化组件动态组装阶段，最终迈向完全生成阶段，对运行时环境与标准化能力提出更高要求。
 

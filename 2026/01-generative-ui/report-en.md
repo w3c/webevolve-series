@@ -2,7 +2,7 @@
 
 # Generative UI Special Exchange Meeting Summary
 
-- [Event Introduction](#event-introduction)
+- [Overview](#overview)
 - [Opening Discussion (Chunming Hu, Zuo Wang)](#opening-discussion-chunming-hu-zuo-wang)
 - [Industry Practice](#industry-practice)
   - [Chen Lu (Ant Group)](#1-chen-lu-ant-group)
@@ -17,36 +17,36 @@
 - [Conclusions & Next Steps](#conclusions--next-steps)
 
 
-## Event Introduction
+## Overview
 
-With the rapid development of large models and generative AI, **Generative UI** is becoming a direction of significant industry focus. While exploring various technical paths in this field, the industry also faces a series of new challenges such as performance efficiency, security risks, scalability, and interoperability.
+With the rapid development of large language models and generative AI, Generative UI has become a highly visible area of interest across the industry. While multiple technical approaches are being explored, practitioners are also facing a new set of challenges around performance and efficiency, security risks, scalability, and interoperability.
 
-To further discuss the development trends of Generative UI in the Web domain and the possibility of standardization, **W3C China** held a special online seminar on **January 29, 2026**, with **over 50 participants** from W3C member organizations joining the exchange.
+To further discuss the development trends of Generative UI on the Web and its standardization potential, W3C China organized an online workshop on 29 January 2026, which was attended by over 50 participants from W3C member organizations.
 
 ---
 
 ## Opening Discussion (Chunming Hu, Zuo Wang)
 
-This meeting was opened and featured perspectives shared by **Prof. Chunming Hu, W3C Advisory Board member from Beihang University**, and **Dr. Zuo Wang from Huawei Fields Laboratory**.
+The workshop opened with remarks and perspectives from **Prof. Chunming Hu, W3C Advisory Board member from Beihang University**, and **Dr. Zuo Wang from Huawei Fields Laboratory**.
 
-**Prof. Chunming Hu** pointed out that the focus of AI-assisted software development in the Web domain is gradually shifting towards **frontend UI**. With large models and intelligent agents (Agents) participating in human-computer interaction, UI is becoming a new critical interaction layer. Currently, MCP/Agents widely adopt generative UI and express interaction requirements through **Markdown, HTML, or other DSLs**.
+**Prof. Chunming Hu** observed that in the Web domain, the focus of AI-assisted software development is gradually shifting toward frontend UI. As large models and agents become part of human–computer interaction, the UI is emerging as a new critical interaction layer. At present, MCP/agents widely adopt Generative UI, expressing interaction requirements via **Markdown, HTML, or other DSLs**.
 
-Regarding the future expression method of the interaction layer and its potential for standardization, he raised several questions worth in-depth discussion:
+Around the future expression of this interaction layer and its standardization space, he raised several questions worthy of deeper discussion:
 
 * Should standards **extend capabilities on top of Markdown**, or **appropriately simplify HTML**?
 * How can generative UI achieve a **balance between generation and constraints** with AI assistance?
-* W3C's explorations in directions such as **high-performance HTML/CSS subsets, mini-program forms, and "meta-services"** are highly relevant to the above topics.
+* How do ongoing W3C explorations around **high-performance HTML/CSS subsets, mini-program forms, and "meta-services"** relate to these topics?
 
-He also mentioned that the **W3C Advisory Committee Meeting ([AC 2026](https://www.w3.org/zh-hans/events/))** will be held in **Hangzhou, China**. Forming relevant consensus step-by-step before the meeting will help facilitate more in-depth exchanges and discussions.
+He also mentioned that the **W3C Advisory Committee Meeting ([AC 2026](https://www.w3.org/zh-hans/events/))** will be held in **Hangzhou, China**, and that forming consensus ahead of that meeting would help enable deeper exchanges and discussions.
 
 ---
 
-**Dr. Zuo Wang** shared observations and thoughts on **"Deep UI"** from the perspective of changes in Web entry points and application forms after the rise of large models:
+**Dr. Zuo Wang** shared observations and thoughts on **"Deep UI"** from the perspective of how the Web entry point and application form are changing in the era of large models:
 
-* **PC Side**: Users still primarily interact with models through browsers, with models manipulating web pages via Web kernels and MCP.
-* **Mobile Side**: Service distribution is gradually being handled by models. The form of Web pages within traditional Apps/mini-programs is migrating to **model-generated UI**.
+* **On PC**: users still mainly interact with models through the browser, with models controlling pages via the Web engine and MCP.
+* **On Mobile**: app and service distribution is increasingly mediated by models, and the Web pages that used to live inside traditional apps or MiniApps are migrating into **model-generated UIs**.
 
-This type of UI, with higher production efficiency and stronger real-time personalization capabilities, will become an important interface for future human-computer interaction.
+Such UIs offer higher production efficiency and stronger real-time personalization, and are expected to become an important interface for future human–computer interaction.
 
 ![Illustration](img-1.png)
 
@@ -62,25 +62,25 @@ Regarding the technical evolution of generative UI, he believes the industry has
 
 ## Industry Practice
 
-Several technical experts from the industry shared their understanding and practical experience with generative UI.
+Several technical experts from the industry shared their respective understandings and hands-on experience with generative UI.
 
 ### 1. Chen Lu (Ant Group)
 
-📄 PPT:
+📄 Slides:
 [https://www.w3.org/2026/01/GenUI-China/Perspectives_of_Generative_UI_RH.pptx](https://www.w3.org/2026/01/GenUI-China/Perspectives_of_Generative_UI_RH.pptx)
 
-Based on practices at Ant Group and the industry, Chen Lu shared observations and thoughts on generative UI:
+Drawing on experience from Ant and the broader industry, Lu shared his observations and thinking on Generative UI:
 
-* With the rapid evolution of large model coding capabilities and Coding Agents, industry confidence in using large models to generate Web pages and applications has significantly increased, making generative UI a growing focus.
-* The approach of generating complete HTML in generative UI is overlapping with the boundaries of AI Coding, prompting a rethinking of the definition and discussion focus of generative UI.
+* As large models’ coding capabilities and coding agents advance rapidly, confidence in using models to generate Web pages and applications has grown significantly, and Generative UI is becoming a major focus.
+* The route of having models generate full HTML increasingly overlaps with the scope of AI coding, prompting a rethinking of how Generative UI should be defined and what its key discussion topics should be.
 
-He systematically analyzed three technical paths: Markdown, DSL, and direct HTML output, noting that current industry interest in direct HTML output and DSL-based approaches is clearly rising. Direct HTML output offers extremely high expressive potential but faces significant challenges in security, performance, and infrastructure costs. DSL-based schemes, through componentization and controlled rendering, offer more advantages in security, performance, and cross-platform consistency. However, as vendors can build them at low cost, the ecosystem is highly fragmented.
+He analyzed three technical routes: Markdown, DSLs, and direct HTML output, and noted that interest in HTML-direct and DSL-based approaches is clearly rising. Direct HTML offers a very high upper bound in expressive power, but comes with substantial challenges in security, performance, and infrastructure cost. By contrast, DSL-based approaches leverage componentization and controlled rendering to gain advantages in security, performance, and cross-platform consistency, but because each vendor can cheaply build its own DSL, the ecosystem is highly fragmented.
 
-Based on this, Chen Lu suggested standardization efforts should focus on three directions:
+Based on this, Chen Lu suggested standardization efforts should focus on three areas:
 
-* Explore model-friendly lightweight Web subsets to enhance security.
-* Research better sandboxing and isolation mechanisms.
-* Promote cross-vendor universal generative UI intermediate protocols to lay the foundation for future ecosystem collaboration.
+* Explore a model-friendly, lightweight Web subset to improve security.
+* Study better sandboxing and isolation mechanisms.
+* Promote a cross-vendor, common intermediate protocol for Generative UI to lay the foundation for future ecosystem collaboration.
 
 ---
 

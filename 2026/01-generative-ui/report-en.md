@@ -2,9 +2,9 @@
 
 # Generative UI Special Exchange Meeting Summary
 
-- [1. Event Introduction](#1-event-introduction)
-- [2. Opening Discussion (Chunming Hu, Zuo Wang)](#2-opening-discussion-chunming-hu-zuo-wang)
-- [3. Industry Practice Sharing](#3-industry-practice-sharing)
+- [Event Introduction](#event-introduction)
+- [Opening Discussion (Chunming Hu, Zuo Wang)](#opening-discussion-chunming-hu-zuo-wang)
+- [Industry Practice](#industry-practice)
   - [Chen Lu (Ant Group)](#1-chen-lu-ant-group)
   - [Chunhui Mo (Huawei)](#2-chunhui-mo-huawei)
   - [Ming Zu (Baidu)](#3-ming-zu-baidu)
@@ -17,7 +17,7 @@
 - [Conclusions & Next Steps](#conclusions--next-steps)
 
 
-## 1. Event Introduction
+## Event Introduction
 
 With the rapid development of large models and generative AI, **Generative UI** is becoming a direction of significant industry focus. While exploring various technical paths in this field, the industry also faces a series of new challenges such as performance efficiency, security risks, scalability, and interoperability.
 
@@ -25,7 +25,7 @@ To further discuss the development trends of Generative UI in the Web domain and
 
 ---
 
-## 2. Opening Discussion (Chunming Hu, Zuo Wang)
+## Opening Discussion (Chunming Hu, Zuo Wang)
 
 This meeting was opened and featured perspectives shared by **Prof. Chunming Hu, W3C Advisory Board member from Beihang University**, and **Dr. Zuo Wang from Huawei Fields Laboratory**.
 
@@ -60,7 +60,7 @@ Regarding the technical evolution of generative UI, he believes the industry has
 
 ---
 
-## 3. Industry Practice Sharing
+## Industry Practice
 
 Several technical experts from the industry shared their understanding and practical experience with generative UI.
 

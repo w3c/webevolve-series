@@ -8,8 +8,8 @@
   - [Chen Lu (Ant Group)](#1-chen-lu-ant-group)
   - [Chunhui Mo (Huawei)](#2-chunhui-mo-huawei)
   - [Ming Zu (Baidu)](#3-ming-zu-baidu)
-- [Open Discussion Session](#open-discussion-session)
-  - [Q1: Performance & Loading Speed](#q1-is-loading-speed-still-important-for-ui-interfaces-generated-by-large-models-in-ai-chat-scenarios)
+- [Round Table Discussions](#round-table-discussions)
+  - [Q1: Performance & Loading](#q1-in-ai-chat-scenarios-does-UI-load-performance-still-matter)
   - [Q2: Standard Collaboration & Ecosystem](#q2-how-to-optimize-platforms-and-ecosystems-through-standard-collaboration)
   - [Q3: UI Components](#q3-ui-components)
   - [Q4: Web Subset](#q4-web-subset)
@@ -86,137 +86,107 @@ Based on this, Chen Lu suggested standardization efforts should focus on three a
 
 ### 2. Chunhui Mo (Huawei)
 
-📄 PPT:
+📄 Slides:
 [https://www.w3.org/2026/01/GenUI-China/Generative_UI_Technology_Insights_MCH.pptx](https://www.w3.org/2026/01/GenUI-China/Generative_UI_Technology_Insights_MCH.pptx)
 
-From an engineering perspective, he systematically analyzed the technical essence and implementation path of Generative UI. He pointed out that the core of Generative UI lies not in AI-driven template selection, but in "Real-time Generation" capability: models need to dynamically generate page structures, component types, layout methods, and interaction logic at runtime based on user intent and context. Most current practices still fall under design-time preset UI, essentially template orchestration systems. AI only participates in parameter filling and decision support, limiting scenario coverage and making it difficult to support long-tail demands.
+Mo provided a systematic analysis of the technical essence and deployment path of Generative UI from an engineering perspective. He argued that the core of Generative UI is not AI assisting template selection, but its real-time generation capability: at runtime, the model must dynamically generate page structure, component types, layout, and interaction logic based on user intent and context. Most current practices still operate at a design-time preset-UI stage, essentially functioning as template orchestration systems where AI only participates in parameter filling and decision support; coverage remains constrained by template scope and struggles to serve long-tail scenarios.
 
-Focusing on enterprise practice, he proposed "scenario coverage rate" as a key metric for measuring generation capability: the coverage of templated solutions is constrained by template scale, while true generative UI can theoretically achieve full-scenario adaptation. In technical evolution, generative UI will progress through the template stage, the dynamic assembly of atomic components stage, and finally move towards a fully generative stage, imposing higher requirements on runtime environments and standardization capabilities.
+From the perspective of enterprise practice, he proposed “scenario coverage” as a key metric for generation capability: template-based approaches are fundamentally limited by template inventory, whereas in principle, Generative UI should be able to adapt across the full scenario space. In terms of technical evolution, he suggested that Generative UI will move from a template phase, through a phase of dynamically assembling atomic components, and eventually toward full generation, which imposes higher requirements on the runtime environment and standardization.
 
-At the implementation level, he compared the adaptability of JSON and XML as DSLs, noting that XML is more conducive to frontend parsing and real-time rendering under streaming output and incomplete structures. He also emphasized the need for a unified rendering architecture to support Web and Native multi-platform consistency and ensure controllable generation results through security guardrail mechanisms. Addressing the experience fragmentation caused by multi-page generation, he proposed a "Generative Mini-Program" approach, using AI to unify the scheduling of multi-page logic and support complex business closed loops. He stressed that generative UI must support the integration of enterprise-owned components and allow mixed output of text, structured UI, and DSL to achieve real-world adoption.
+On the implementation side, he compared the suitability of JSON and XML as DSLs, noting that XML is more favorable for frontend parsing and real-time rendering under streaming output and incomplete structures. He also emphasized the need for a unified rendering architecture to support consistent behavior across Web and native platforms, and for safeguards to keep generated output under control. To address fragmented experience across multiple generated pages, he proposed the idea of “generative MiniApps,” where AI orchestrates multi-page flows to support complex business end-to-end. He stressed that Generative UI must support integration of enterprise-specific components and mixing text, structured UI, and DSL output to be truly deployable.
 
 He proposed the following next steps:
-* Explore capability requirements at the browser kernel level.
+* Explore capability requirements at the browser-engine level.
 * Promote standardization related to generative UI.
-* Clarify security guardrail specifications.
-* Build more universal DSL specifications.
-* Research multi-platform unified rendering frameworks.
+* Define security guardrail specifications.
+* Build more general DSL specifications.
+* Research unified multi-end rendering frameworks.
 
 ---
 
 ### 3. Ming Zu (Baidu)
 
-Introduced Baidu's current work in the area of generative UI. Overall, the practical path is quite similar to the ideas shared by the previous two speakers.
-
-Since beginning to explore AI applications in early 2023, Baidu has also continuously made various extensions based on Markdown to support richer and more powerful components within conversational product forms. Simultaneously, in the process of building the Agent ecosystem, and from the perspective of reducing developer integration costs, they also defined a JSON DSL to provide UI layout and interaction capabilities. Through constant iteration over the past few years, a relatively mature solution has gradually taken shape.
+Ming introduced Baidu’s ongoing work on Generative UI, which overall follows a broadly similar line of thinking to the previous speakers. Since beginning to explore AI applications in early 2023, Baidu has continuously extended Markdown to support richer and more powerful components in conversational product paradigms. In parallel, as part of its agent ecosystem, Baidu has defined a JSON-based DSL to provide layout and interaction capabilities while reducing integration costs for developers. Through several years of iteration, this has grown into a relatively mature solution.
 
 At the end of last year, they systematically integrated the technical accumulations from the past few years, including core capabilities such as protocols, rendering engines, and component libraries, and open-sourced it externally 👉 [https://github.com/baidu/cosui/](https://github.com/baidu/cosui/)
 
-Recent key research directions involve exploring how to use large models to directly generate code, providing more diverse and rich interactive applications in search scenarios. In this process, they have also encountered some common issues mentioned by the previous speakers. Therefore, they also hope to further exchange ideas with the industry in the future to jointly promote the development and adoption of related technologies.
+Recent work focuses on using large models to generate code directly, particularly to deliver richer interactive applications in search scenarios. In this process, Baidu has encountered many of the same issues raised by other speakers and hopes to continue exchanging with the wider community to jointly advance and land related technologies.
 
 ---
-## Open Discussion Session
+## Round Table Discussions
 
-### Q1: Is loading speed still important for UI interfaces generated by large models in AI chat scenarios?
+### Q1: In AI chat scenarios, does UI load performance still matter?
 
 **Zuo Wang:**
-In the development of traditional mobile technologies, we experienced the evolution path of "Native → Web → Cross-platform Technology Stacks". The core goal of cross-platform technology is to maintain the advantage of cross-platform while approximating the performance and loading speed of native applications as much as possible. The reason cross-platform technology solutions emerged is essentially because users were generally dissatisfied with the "slow loading" experience of Web pages.
+In the evolution of mobile technologies, the ecosystem has moved from purely native to Web, and then to cross-platform stacks, with cross-platform approaches aiming to stay close to native performance and load times while preserving cross-platform advantages. Cross-platform technologies emerged largely because users were dissatisfied with “slow-loading” Web pages.
 
-However, in the current AI conversation and generative application scenarios, user perception has undergone some changes: in traditional page scenarios, users default to expecting "click for immediate response" and are very sensitive to speed; whereas in AI chat scenarios, users are more inclined to view the system as an "intelligent agent with thinking ability", and therefore possess higher tolerance and patience for response speed.
+However, in current AI conversational and generative application scenarios, user mental models have shifted. In traditional page scenarios, users expect “click and instant response” and are highly sensitive to latency, whereas in AI chat scenarios, users are more inclined to treat the system as a “thinking agent,” and therefore show greater tolerance and patience toward response time.
 
-In generative UI scenarios, if the interface content is dynamically loaded and generated through Web technology, does its loading speed still have a critical impact on user experience like in traditional applications? In other words, will users lower their expectations for immediate performance due to the psychological anticipation that "AI needs to think"? I hope to understand various vendors' perspectives and requirement positioning on this issue in their actual product design.
+In Generative UI scenarios where the interface is dynamically loaded and generated via Web technologies, the question arises: does load speed still impact user experience as critically as in traditional applications? Put differently, will users lower their expectations for instantaneous performance because they anticipate that “the AI needs to think”? He invited perspectives from different vendors on how they position this issue in product design.
 
 **Ming Zu:**
-In Baidu's search scenario, our performance requirements are still relatively high at present, which is also a relatively significant business scenario constraint and challenge we are currently facing.
+In Baidu’s search scenarios, performance requirements remain relatively strict, which is a major practical constraint and challenge.
 
 **Ruoxi Ran:**
-I'd like to briefly add some thoughts regarding performance. We will continue to advance related work and discuss further with everyone at an appropriate time.
+Ruoxi briefly complemented the performance discussion, noting that related work will continue and be shared at appropriate times. He referenced Mo’s earlier notion of a current “impossible triangle” in Generative UI, which prompted further reflection. Across different access modalities—API, local deployment, or Web—users today generally accept that large models take time to generate content and are relatively tolerant of latency
 
-While listening to Chunhui's presentation earlier, I noticed a point he mentioned—the "impossible triangle" that generative UI currently faces. This also sparked some thinking on my part. Currently, in the process of using large models, whether through API calls, deploying models locally, or using large models through Web applications, people seem to have a relatively high tolerance for the response time of model-generated content.
+In the longer term, however, he is unsure this tolerance will persist. Historically, users were once willing to wait a minute for Web pages to load, but expectations have tightened as technology and experience improved. A similar trend may emerge as large models and AI applications become ubiquitous, with expectations of performance rising and tolerance of latency decreasing.
 
-From the current stage, users generally accept the characteristic that large models "need thinking time" and have relatively lenient real-time requirements. However, from a longer-term perspective, I am not sure if this tolerance will persist. Looking back at the development history of Web technology: in the early stages, users also had high tolerance for webpage loading speeds, even accepting waits of a minute; and with technological advancements and improved experience, user demands for response time have significantly increased now.
-
-Therefore, I am considering whether a similar trend will occur in the process of large models and AI applications gradually becoming widespread—user expectations for performance will gradually increase, and tolerance for latency will gradually decrease.
-
-At the current technological stage, we may indeed need to face a similar "impossible triangle" problem: how to achieve a balance among performance, flexibility, and experience. How to find a reasonable balance point while continuously optimizing performance, I believe this is a very worthy topic for discussion. Whether within W3C or across the entire industry, it is necessary to have more in-depth discussions around this issue.
+At the current stage, we likely must confront a similar “impossible triangle” trade-off between performance, flexibility, and experience, and search for a reasonable balance while continually optimizing performance. He suggested that this is a topic worthy of deeper discussion both within W3C and across the broader industry.
 
 **Chunhui Mo:**
-I would like to talk about the relationship between generative UI and large models from the perspective of performance metrics.
+Mo approached the topic from the standpoint of performance metrics and the relationship between Generative UI and large models. In LLMs, TTFT (Time To First Token) and TPOT (Time Per Output Token) are key performance indicators; he wondered whether Generative UI should develop analogous metrics to evaluate user-perceived performance.
 
-In the field of large models, there are two very important performance metrics: TTFT (Time To First Token) and TPOT (Time Per Output Token). These two metrics have become key standards for measuring large model performance. I am thinking, for generative UI, should we also establish a similar measurement system to evaluate performance at the user experience level?
+One possible approach is to treat mature LLM metrics as inputs when designing Generative UI metrics. For example, even before the final result is produced, early feedback—such as chain-of-thought snippets or partial content—is already a meaningful form of response. The critical factor becomes the wait time between submission and the first useful feedback, and how tolerant users are of that time.
 
-Currently, a feasible idea is to refer to the relatively mature indicator system of large models and use them as inputs for designing generative UI metrics. For example, during the large model generation process, even if the final result is not fully output, as long as some feedback can be given to the user early—whether it's the display of a chain of thought or the gradual presentation of partial content—it is itself an effective "response". The key lies in: the waiting time from the user clicking submit to seeing the first effective feedback, and the user's tolerance for this waiting time.
+In static UI design, the “three-second rule” has often been applied, beyond which user drop-off increases sharply; this clearly no longer fits Generative UI. Since LLM computation inherently takes time, user expectations and tolerance are higher, but entirely blank screens with one or two minutes of no feedback remain unacceptable.
 
-In the era of traditional static UI, we usually followed the "three-second rule", meaning users found it hard to accept no response beyond three seconds, otherwise it would cause significant drop-off. But in generative UI scenarios, this standard is clearly no longer applicable. The computational process of large models inherently requires time, so user psychological expectations and tolerance will also be higher. However, if there is no feedback at all, making users wait for a blank interface for one or two minutes, is equally unacceptable.
+He suggested that the community should focus on how to define a performance metric system tailored to Generative UI. For example, following the TTFT paradigm, the “time to first visible feedback” could be a core metric. For UI, more fine-grained indicators are also needed, such as:
+- Time until the first UI element appears;
+- The cadence of subsequent rendering;
+- Time intervals between each chunk of text or UI component.
 
-Therefore, I believe the next key point for discussion is how should the performance metrics for generative UI be defined?
-
-Can we learn from the TTFT concept of large models and take "the time when the first visible feedback appears" as a core measurement standard?
-
-Looking further, for UI scenarios, we need more granular metrics. For example:
-- The time when the first UI element appears;
-- The rhythm of subsequent content being rendered progressively;
-- The output interval of each text character or each UI component module.
-
-Whether it's the gradual presentation of text content or the progressive loading of various components in a graphical interface, it essentially resembles the streaming output of tokens. We can completely take "the output time of each visual component" as an important dimension for measuring generative UI performance.
-
-In summary, my suggestion is: refer to the TTFT and token output rhythm of large models to establish a set of quantitative performance indicator systems applicable to generative UI, used to evaluate "first screen display time" and "the efficiency of subsequent UI elements being gradually presented". Only in this way can we provide the industry with a unified, quantifiable, and evaluable standard, and also be more conducive to optimizing the real user experience.
+In essence, the progressive display of text or UI elements is analogous to token streaming, and the timing of each visible unit could serve as an important dimension in Generative UI performance evaluation. He recommended building a quantitative performance metric system inspired by TTFT and token streaming to assess “time to first view” and the efficiency of progressive UI presentation.
 
 ---
 
 ### Q2: How to optimize platforms and ecosystems through standard collaboration
 
 **Zuo Wang:**
-Let me add another thought. The previous speakers all mentioned the issue of "proprietary standards", which is also a point I have been focusing on and thinking about.
+Wang returned to the issue of “proprietary standards,” which several speakers had also raised. From his perspective, both service providers and platform vendors (including LLM and digital environment providers) are currently defining their own UI description formats based on their specific needs. This leads him to ask whether we need—and whether it is feasible—to move toward unification of Generative UI-related standards.
 
-From my understanding, whether facing service providers, large model platform vendors, or digital environment vendors, all parties are currently formulating their own UI description specifications based on their own needs. Regarding this phenomenon, I have always held a question:
-Is it necessary, and is it possible, for us to promote the unification of standards related to generative UI?
+As LLMs evolve into service distribution platforms, they will ultimately need to present generated interactive interfaces to users, often produced collaboratively by multiple services or agents. If each platform defines its own private UI description, developers and service providers may have to integrate with many different protocols and parsers, significantly inflating integration costs and harming ecosystem health.
 
-The current trend is that large models are gradually becoming service distribution platforms. When they complete service distribution, they will eventually present an interaction interface to the user, and this interface is often automatically generated by the model. Moreover, in practical scenarios, this process is not only completed by a single model but may also involve collaboration among multiple service providers and multiple AI Agents, ultimately jointly generating a resulting interface.
-
-In this case, if each model and each platform defines its own proprietary UI description method, the threshold may seem low, but it is not friendly to the entire ecosystem in the long run. For example, if there are ten large model vendors in the market, and each adopts a different interface description standard, then as an application developer or service provider, they need to adapt to ten different protocols and parsing methods respectively. This will undoubtedly significantly increase integration costs and is not conducive to the healthy development of the technological ecosystem.
-
-Therefore, the core point I want to express is: at the description level of generative UI—whether based on HTML/CSS or more abstract DSL forms—can we first reach a basic consensus: to promote the standardization and unification of this layer as much as possible?
-
-If a consensus can be formed on this point, allowing different models and platforms to follow relatively consistent description specifications, it will be more beneficial to developers, service providers, and the entire industrial ecosystem, and can also better promote the long-term development of generative UI technology.
+He argued that at the level of UI description—whether via HTML/CSS or more abstract DSLs—we should seek consensus to push this layer toward standardization and unification. If different models and platforms can converge on relatively consistent description formats, it will benefit developers, service providers, and the ecosystem, and better support the long-term development of Generative UI.
 
 **Chunming Hu:**
-Let me briefly share two points of view. First, I believe at the layer of final UI presentation, a standard is definitely still needed. Everyone mentioned the concept of "subset" earlier. From the current technological form, no matter what form generative UI outputs, it ultimately requires a runtime environment to render. Even if today's large model only outputs Markdown, it still needs a renderer to parse and display it. If the interaction is more complex, richer API support is needed, and ultimately it still has to be handed over to a runtime layer similar to View to complete display and interaction.
+Hu added two points. First, he believes there will ultimately need to be a standard at the UI presentation layer. Regardless of output format, generated content must be rendered by some runtime environment; even Markdown requires a renderer. More complex interactions require richer APIs and ultimately a View-like runtime layer for display and interaction.
 
-So architecturally, there is naturally a stratification here:
-- One layer is the large model generating a certain constrained DSL;
-- Another layer is a rendering runtime from lightweight to complex, used to parse this DSL and implement interaction.
+Architecturally, there is therefore an inherent layering:
+- A generation layer where models produce some constrained DSL;
+- A runtime layer, from lightweight to more complex, that parses the DSL and implements interaction.
 
-Whether we like it or not subjectively, this layered structure of "generation layer + runtime layer" actually exists objectively.
-
-The second point of view is about cross-vendor unification. In theory, each vendor can define a DSL only for its own model, as long as its own runtime can parse it. But if no standardization is done at all, it will lead to a lot of reinventing the wheel: different vendors will have to develop and maintain similar runtimes and parsing mechanisms respectively, which is costly and not conducive to ecosystem development.
-
-If this layer can be standardized to a certain extent, or at least define several "subset specifications" of capability levels, it can decouple content supply and runtime, which is meaningful for the entire industry.
-
-Also, there is a practical requirement: in the future, multiple large models and multiple service parties may jointly participate in generating an interface. For example, a user accesses Ctrip or airline services through a certain model. From the brand perspective, they hope the interface style can conform to their own brand consistency. If a middle-layer mechanism similar to templates can be provided, allowing generative UI to fill content on the basis of established templates, perhaps this demand can be better met.
-
-In summary, if these demands are indeed widespread, then defining some cross-vendor specifications at the middle layer is not just a technical optimization but a direction with practical industrial value. These are some of my observations, for your reference.
+This “generation + runtime” decomposition exists objectively, independent of personal preference.
+​
+Second, regarding cross-vendor unification, while vendors could each define their own DSLs and runtimes, this would result in duplicated effort and high maintenance costs. If we standardize this layer, or at least define capability tiers and “subset profiles,” content production and runtime environments can be decoupled, which is beneficial at an industry level.
+​
+He also noted a concrete demand: in scenarios where multiple models and service providers jointly generate a UI, brand owners (for example, airlines or travel services) still expect coherent brand-consistent experiences. Introducing template-like intermediate mechanisms so that Generative UI fills content into predefined templates might better address such requirements. If such needs are common, then defining cross-vendor norms at this intermediate layer could carry both technical and business value.
 
 ---
 
 ### Q3: UI Components
 
 **Chunhui Mo:**
-Actually, we have discussed this topic before. For generative UI, a very core issue is the convergence of UI components. Since it's UI, it necessarily involves components, and currently, the component libraries used by various vendors when developing applications vary greatly. It's almost impossible to require all vendors to use the same set of component libraries to achieve interface display.
+Mo highlighted component convergence as a central issue for Generative UI. Because UI inherently involves components, and current component libraries vary significantly across vendors and scenarios, it is unrealistic to expect everyone to adopt a single shared library.
+​
 
-If we hope to build a generative UI rendering engine, letting the content output by large models be rendered through a runtime, we will inevitably encounter a practical problem: what component system should this rendering engine be based on?
+If we aim to build a rendering engine for Generative UI that renders model outputs at runtime, we must confront the question of what component system it should be based on. Each vendor and business domain has its own components, making it difficult to enforce convergence at the framework or library level. Under these conditions, he argued that the only direction with a realistic chance of convergence for a standardized runtime is Web technologies—the core area of W3C.
+​
 
-Each vendor, each business scenario has its own set of component implementations, making it difficult to forcibly unify at the framework level. Therefore, whether at the framework layer or the component library layer, it's actually difficult to achieve complete convergence. In this case, if we want to discuss a standardized runtime environment that can be widely accepted, I believe the only direction that truly has the possibility of convergence at present is still based on Web technology—this is also the core domain of W3C.
+Within this framing, his team is exploring approaches that allow models to output DSLs describing component usage while supporting various stacks (React, Vue, Web Components, etc.). Before rendering, components from different stacks are normalized into standard Web components. He cited Google’s A2UI protocol as a reference, which also attempts to converge underlying representation by supporting Angular and Web Components and planning to support more frameworks. In their own work, once components are converted into Web Components, the browser-based rendering engine only needs to handle standard Web components without caring about the original stack.
+​
 
-Based on this idea, we are also exploring internally. The current approach is: allow large models to output DSL describing component usage; support different technology stacks (e.g., React, Vue, Web Components, etc.); before rendering, unify components from different technology stacks into Web standard components for processing.
-
-We have also referred to some existing practices in this regard, such as Google's A2UI protocol. Through research, it can be found that Google is also trying to do similar convergence: its examples support both Angular components and Web Components, and plan to support more frameworks. From this perspective, achieving unification through Web Components at the bottom is a relatively feasible technical path.
-
-Our idea is similar: before passing components to the rendering engine, unify them into Web Components first. Since related technologies are relatively mature, this conversion itself is not difficult. In this way, during actual rendering, the rendering engine only needs to handle standard Web components without needing to care about which specific framework or component library is used at the upper layer, achieving consistent display effects in the browser environment.
-
-However, it should be noted that if the DSL protocol directly includes the usage method of a specific component library, such a protocol itself is difficult to become a universal standard. A more reasonable approach is similar to the A2UI idea: the standard level does not specify the specific format of components, but defines a mechanism that allows developers to declare to the large model in advance the "available component set and its parameter capabilities". The large model only needs to generate UI based on these capabilities without needing to care about the specific implementation details of the components.
-
-I believe that a certain degree of convergence and standardization can be achieved at this level, which may also be a direction we can focus on promoting subsequently.
+He cautioned that DSLs which directly encode specific component libraries are unlikely to become general standards. A more robust approach is to follow A2UI-like patterns where the standard describes a mechanism for declaring available components and their parameter capabilities to the model. The model then generates UIs based on those declared capabilities, without depending on any particular implementation. He believes this layer can achieve meaningful convergence and is a promising focus for future work.
 
 ---
 
@@ -226,11 +196,11 @@ I believe that a certain degree of convergence and standardization can be achiev
 Introduced the [joint discussion](https://www.w3.org/community/high-perf-baseline/2025/12/17/tpac-2025/) of the W3C MiniApps Working Group, the W3C High-Performance Web Applications Community Group, the WebView Community Group, the IWA Community, and the PWA Widget Community.
 
 **Fuqiao Xue:**
-In the discussions on GitHub, I also wrote down some of my thoughts. Combining the sharing from the experts just now, I believe the development of generative UI has two main directions:
-- Directly generating Web pages, i.e., generating HTML/CSS/JS code;
-- Generating restricted card forms based on component libraries, for example, defining components using JS, XML, etc., and then rendering them through component libraries.
+Xue noted that, based on GitHub discussions and the workshop talks, Generative UI seems to be advancing along two primary paths:
+- Direct generation of Web pages (HTML/CSS/JS);
+- Generation of constrained card-style UIs based on component libraries, defined in JS, XML, etc. and rendered via component systems.
 
-I believe these two directions are not mutually exclusive and can be considered simultaneously.
+He believes these two paths are not mutually exclusive and can be considered simultaneously.
 
 For the direction of directly generating Web, its flexibility and upper limit are very high, capable of generating rich interfaces, but it also brings some issues, especially security and communication issues. To balance flexibility and security, the scheme I previously considered is:
 - Establish a restricted subset of HTML/CSS/JS, accompanied by rendering guidelines;
@@ -244,33 +214,25 @@ On the other hand, we can also consider developing standardized DSLs:
 
 Additionally, regarding the component library issue, W3C's [Open UI Community Group](https://www.w3.org/groups/cg/open-ui/) is currently working on UI component standardization. We can pay attention and refer to their ideas.
 
-In general, I believe in the future we can explore both paths—direct Web and DSL standardization—simultaneously to provide feasible solutions for the security, controllability, and cross-platform rendering of generative UI.
+In general, he believes in the future we can explore both paths—direct Web and DSL standardization—simultaneously to provide feasible solutions for the security, controllability, and cross-platform rendering of generative UI.
 
 ---
 
 ### Q5: Testing and Verification
 
 **Zuo Wang:**
-Regarding the testing and verification of generative UI, I have a few thoughts:
-
-In traditional Web development, humans conduct testing before going live, but generative UI is generated by models, especially for complex interfaces, making it impossible to rely entirely on manual verification.
-
-Therefore, it is necessary to establish specialized testing processes or infrastructure, possibly deploying virtual environments on the client side, allowing the interfaces generated by models to be automatically verified for correctness and reliability in test environments first.
-
-Practical cases show that some companies automatically generate test cases using models and run them in server-side or virtual environments to verify the correctness of generated outputs before delivering them to users.
-
-In summary, the reliability verification of generative UI should rely more on automated testing and virtualization environments rather than traditional manual testing. This is an important means to ensure the reliability of the content seen by users.
+On testing and verification, Wang observed that while traditional Web development relies on human testing before release, this becomes infeasible for model-generated UIs, especially complex ones. He argued for dedicated testing processes and infrastructure, potentially with virtualized environments where model-generated UIs are first validated for correctness and reliability. Some practitioners already use models to automatically generate and run test cases on the server or in virtual environments to verify outputs before delivering them to users. In summary, he stressed that Generative UI reliability must rely more on automated testing and virtualization than on manual testing, in order to ensure that users see trustworthy content.
 
 **Ruoxi Ran:**
-Regarding the accessibility and testing of generative UI, I have the following thoughts:
+Regarding the accessibility and testing of generative UI, Ruoxi emphasized the following topics:
 - UI is highly related to accessibility. If the content of generative UI does not comply with accessibility standards, it may bring compliance risks, such as facing product removal in Europe and the US, etc.;
-- Some existing automated accessibility testing tools still cannot cover all standards, so there remains a gap in accessibility verification for generative UI;
-- W3C can learn from the experience of the WPT ([Web Platform Tests](https://github.com/web-platform-tests/wpt)) platform and consider developing an open-source testing platform or tool for automated verification of generative UI, including accessibility testing;
-- The goal is to establish a set of shareable open-source methods and platforms, enabling different vendors and developers to uniformly test the accessibility and other key quality metrics of generative UI.
+- Existing automated accessibility testing tools do not fully cover all standards, leaving gaps for Generative UI;
+- W3C can learn from the experience of the WPT ([Web Platform Tests](https://github.com/web-platform-tests/wpt)) platform project to develop an open testing platform or tooling for automated verification of Generative UI, including accessibility;
+- The goal would be to provide a shared open platform for testing accessibility and other key quality metrics across vendors and developers.
 
 **Fuqiao Xue:**
-Regarding the automated testing and verification of generative UI, I believe the following directions can be considered:
-- W3C currently has the Browser Testing and Tools Working Group, which includes the WebDriver protocol and can serve as a reference or foundation;
+Fuqiao proposed that:
+- W3C’s existing Browser Testing and Tools work, including the WebDriver protocol, could serve as a foundation for Generative UI testing and verification.
 - Methods for automatically generating, running, and evaluating generated UI can be explored, for example:
   - Automatically taking screenshots or capturing the generated UI;
   - Comparing the generated UI with user intent for verification;
@@ -282,11 +244,11 @@ These methods can provide quantifiable testing means for the reliability and use
 
 ## Conclusions & Next Steps
 
-The Generative UI Community Group was established following this meeting and plans to conduct further exploration around the following areas:
+Following the workshop, the Generative UI Community Group was established and plans to explore the following areas:
 
-- **Evaluation & Performance:** Explore how to define and evaluate the latency, responsiveness, and output quality of Generative UI in Web environments, and identify gaps in existing W3C standardization work.
-- **Verification & Testing:** Investigate verification and testing methods for Generative UI. These methods should go beyond traditional end-to-end testing and can include the application of structured test cases and reference implementations.
-- **Intermediate Representation:** Explore the potential value of lightweight, cross-vendor intermediate representations or protocols for Generative UI, with the aim of improving its interoperability and model compatibility.
-- **Alignment with Web Platform:** Examine whether Generative UI systems could benefit from a lightweight subset of Web technologies, and the need to remain consistent with existing Web principles.
+- **Evaluation & Performance:** Explore how to characterize and assess latency, responsiveness, and output quality of Generative UI in the Web context, and identify gaps in current W3C standardization.
+- **Verification & Testing:** Investigate validation and testing methodologies for Generative UI that go beyond traditional end-to-end testing, including structured test cases and reference implementations.
+- **Intermediate Representation:** Explore the potential value of lightweight, cross-vendor intermediate representations or protocols for Generative UI to improve interoperability and model compatibility.
+- **Alignment with Web Platform:** Analyze whether Generative UI systems would benefit from a lightweight subset of Web technologies, while remaining consistent with existing Web principles.
 
-Welcome to join the [Generative UI Community Group](https://www.w3.org/groups/cg/gen-ui/) and participate in related discussions.
+All interested parties are welcome to join the [Generative UI Community Group](https://www.w3.org/groups/cg/gen-ui/) and participate in the discussion.

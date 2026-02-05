@@ -21,13 +21,13 @@
 
 With the rapid development of large language models and generative AI, Generative UI has become a highly visible area of interest across the industry. While multiple technical approaches are being explored, practitioners are also facing a new set of challenges around performance and efficiency, security risks, scalability, and interoperability.
 
-To further discuss the development trends of Generative UI on the Web and its standardization potential, W3C China organized an online workshop on 29 January 2026, which was attended by over 50 participants from W3C member organizations.
+To further discuss the development trends of Generative UI on the Web and its standardization potential, W3C China organized an online meeting on 29 January 2026, which was attended by over 50 participants from W3C member organizations.
 
 ---
 
 ## Opening Discussion (Chunming Hu, Zuo Wang)
 
-The workshop opened with remarks and perspectives from **Prof. Chunming Hu, W3C Advisory Board member from Beihang University**, and **Dr. Zuo Wang from Huawei Fields Laboratory**.
+The meeting opened with remarks and perspectives from **Prof. Chunming Hu, W3C Advisory Board member from Beihang University**, and **Dr. Zuo Wang from Huawei Fields Laboratory**.
 
 **Prof. Chunming Hu** observed that in the Web domain, the focus of AI-assisted software development is gradually shifting toward frontend UI. As large models and agents become part of human–computer interaction, the UI is emerging as a new critical interaction layer. At present, MCP/agents widely adopt Generative UI, expressing interaction requirements via **Markdown, HTML, or other DSLs**.
 
@@ -196,7 +196,7 @@ He cautioned that DSLs which directly encode specific component libraries are un
 Introduced the [joint discussion](https://www.w3.org/community/high-perf-baseline/2025/12/17/tpac-2025/) of the W3C MiniApps Working Group, the W3C High-Performance Web Applications Community Group, the WebView Community Group, the IWA Community, and the PWA Widget Community.
 
 **Fuqiao Xue:**
-Xue noted that, based on GitHub discussions and the workshop talks, Generative UI seems to be advancing along two primary paths:
+Xue noted that, based on GitHub discussions and the meeting talks, Generative UI seems to be advancing along two primary paths:
 - Direct generation of Web pages (HTML/CSS/JS);
 - Generation of constrained card-style UIs based on component libraries, defined in JS, XML, etc. and rendered via component systems.
 
@@ -244,7 +244,7 @@ These methods can provide quantifiable testing means for the reliability and use
 
 ## Conclusions & Next Steps
 
-Following the workshop, the Generative UI Community Group was established and plans to explore the following areas:
+Following the meeting discussion, the Generative UI Community Group was established and plans to explore the following areas:
 
 - **Evaluation & Performance:** Explore how to characterize and assess latency, responsiveness, and output quality of Generative UI in the Web context, and identify gaps in current W3C standardization.
 - **Verification & Testing:** Investigate validation and testing methodologies for Generative UI that go beyond traditional end-to-end testing, including structured test cases and reference implementations.

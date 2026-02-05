@@ -1,3 +1,5 @@
+** NOTE: This is a machine-translated document and is provided for reference only. In case of any discrepancies, the [Chinese version](/report-zh.md) shall prevail. **
+
 # Summary of the Generative UI Meeting on 2026-01-29
 
 * [1. Event Introduction](#1-event-introduction)

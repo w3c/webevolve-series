@@ -1,6 +1,6 @@
 ** NOTE: This is a machine-translated document and is provided for reference only. In case of any discrepancies, the [Chinese version](/report-zh.md) shall prevail. **
 
-# Generative UI Special Exchange Meeting Summary
+# Generative UI Special Session Summary
 
 - [Overview](#overview)
 - [Opening Discussion (Chunming Hu, Zuo Wang)](#opening-discussion-chunming-hu-zuo-wang)

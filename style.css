@@ -70,14 +70,14 @@ header #translations {
 }
 
 #top hgroup * {
-  padding: 1.2rem;
+  padding: 1rem;
   color: #ffffff;
   text-shadow: 4px 4px 20px black;
 }
 
 @media all and (min-width: 787px) {
   #top hgroup {
-    margin-left: 470px;
+    margin-left: 300px;
   }
 
 }
